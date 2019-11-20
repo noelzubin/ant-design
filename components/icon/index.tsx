@@ -18,7 +18,7 @@ const Icon = (props: IconProps) => {
     'anticon-spin': !!spin || type === 'loading',
     [`anticon-${type}`]: true,
   }, className);
-  return <i {...omit(props, ['type', 'spin'])} className={classString} />;
+  return <em {...omit(props, ['type', 'spin'])} className={classString} />;
 };
 
 export default Icon;
