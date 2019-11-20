@@ -87,7 +87,7 @@ export interface IconComponent<P> extends React.SFC<P> {
 
 const Icon: IconComponent<IconProps> = props => {
   const {
-    // affect outter <i>...</i>
+    // affect outter <em>...</em>
     className,
 
     // affect inner <svg>...</svg>
@@ -203,7 +203,7 @@ const Icon: IconComponent<IconProps> = props => {
   return (
     <LocaleReceiver componentName="Icon">
       {(locale: TransferLocale) => (
-        <i
+        <em
           aria-label={type && `${locale.icon}: ${type}`}
           {...restProps}
           tabIndex={iconTabIndex}
@@ -211,7 +211,7 @@ const Icon: IconComponent<IconProps> = props => {
           className={classString}
         >
           {renderInnerNode()}
-        </i>
+        </em>
       )}
     </LocaleReceiver>
   );
